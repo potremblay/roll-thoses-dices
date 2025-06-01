@@ -1,0 +1,9 @@
+{
+  "name": "Roll thoses dices",
+  "short_name": "Roll it",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#476074",
+  "theme_color": "#e2ddbf"
+}

@@ -12,6 +12,10 @@ export function Welcome() {
 
   const valueToNumber = (v: string) => (v === "" ? 0 : Number(v));
 
+  const nbDiceFocusHandler = () => {
+    setNbDice(0);
+  };
+
   const diceTypeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDiceType(valueToNumber(e.target.value));
   };
@@ -67,7 +71,8 @@ export function Welcome() {
             step="1"
             min={1}
             max={100}
-            value={nbDice}
+            value={nbDice === 0 ? "" : nbDice}
+            onFocus={nbDiceFocusHandler}
             onChange={nbDiceHandler}
           />
         </div>

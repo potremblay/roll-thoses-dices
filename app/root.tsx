@@ -24,6 +24,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap",
   },
+  {
+    rel: "manifest",
+    href: "/manifest.json",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -32,6 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#476074" />
         <Meta />
         <Links />
       </head>
@@ -45,6 +50,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js");
+    });
+  }
+
   return <Outlet />;
 }
 
