@@ -1,20 +1,27 @@
-# Welcome to React Router!
+# Roll those dices
 
-A modern, production-ready template for building full-stack React applications using React Router.
+**Note:** this is still a WIP project.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A simple and intuitive web application that allows users to roll virtual dice for tabletop RPGs such as Dungeons & Dragons, Pathfinder, and more. Choose your dice type (d4, d6, d8, d10, d12, d20, etc.) and the number of dice to roll — perfect for character creation, combat, or skill checks.
+
+May luck offer you a natural 20.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Select from common RPG dice types: d4, d6, d8, d10, d12, d20, and d100
+- Choose the number of dice to roll (1 to 100+)
+- Instant result display
 
-## Getting Started
+## Checklist
+
+- [x] Allow to roll dices
+- [x] Make the minium viable product
+- [ ] Finish the interface
+- [ ] Optional modifiers (+/-) for rolls
+
+## 📸 Screenshots
+
+![App Preview](./doc/preview.png)
 
 ### Installation
 
@@ -32,8 +39,6 @@ Start the development server with HMR:
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
 ## Building for Production
 
 Create a production build:
@@ -41,47 +46,3 @@ Create a production build:
 ```bash
 npm run build
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
