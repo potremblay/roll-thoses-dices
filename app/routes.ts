@@ -1,5 +1,7 @@
-import { type RouteConfig, index, layout } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
+
+const basename = import.meta.env.VITE_BASE_PATH || "/";
 
 export default [
-  layout("./components/mainLayout.tsx", [index("routes/home.tsx")]),
+  route(basename, "./components/mainLayout.tsx", [index("routes/home.tsx")]),
 ] satisfies RouteConfig;
