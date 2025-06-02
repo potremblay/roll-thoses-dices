@@ -12,6 +12,7 @@ export function roll(diceDef: Dice | DiceStr): DiceResult {
   let result = 0;
   for (let i = 0; i < dice.quantity; i++) {
     const newRoll = Math.ceil(Math.random() * dice.nbSides);
+    individualDice.push(newRoll);
     result += newRoll;
   }
 

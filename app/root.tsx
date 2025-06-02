@@ -24,10 +24,6 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap",
   },
-  {
-    rel: "manifest",
-    href: "/manifest.json",
-  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

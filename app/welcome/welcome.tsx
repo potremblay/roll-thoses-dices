@@ -125,8 +125,6 @@ export function Welcome() {
                 </li>
               ))}
             </ul>
-
-            <div></div>
           </div>
         </>
       )}

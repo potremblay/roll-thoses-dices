@@ -6,6 +6,7 @@ describe("roll", () => {
 
     expect(result.quantity).toBe(2);
     expect(result.nbSides).toBe(6);
+    expect(result.individualDice).toHaveLength(2);
   });
 
   it("rolls string dice definition", () => {
@@ -13,6 +14,7 @@ describe("roll", () => {
 
     expect(result.quantity).toBe(4);
     expect(result.nbSides).toBe(12);
+    expect(result.individualDice).toHaveLength(4);
   });
 
   it("should be evenly distributed", () => {
